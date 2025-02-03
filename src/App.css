@@ -153,6 +153,12 @@ html {
   background-color: #555;
 }
 
+#edescription{
+  resize: "none"; 
+  min-height: "40px"; 
+  width: "100%";
+}
+
 @media screen and (max-width: 650px) {
   .column {
     width: 100%;
@@ -169,7 +175,7 @@ body {
 .main {
   background-color: #FFFFFF;
   width: 400px;
-  height: 400px;
+  height: 450px;
   margin: 7em auto;
   border-radius: 1.5em;
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
@@ -177,7 +183,7 @@ body {
 
 .sign {
   padding-top: 40px;
-  color: #8C55AA;
+  color: #212529;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 23px;
@@ -237,7 +243,7 @@ font-family: 'Ubuntu', sans-serif;
 cursor: pointer;
   border-radius: 5em;
   color: #fff;
-  background: linear-gradient(to right, #9C27B0, #E040FB);
+  background: linear-gradient(to right, #212529, grey);
   border: 0;
   padding-left: 40px;
   padding-right: 40px;
@@ -251,19 +257,26 @@ cursor: pointer;
 
 .forgot {
   text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-  color: #E1BEE7;
+  color: #212529;
   padding-top: 15px;
+}
+
+.forgot:hover{
+  color: black;
 }
 
 a {
   text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-  color: #E1BEE7;
-  text-decoration: none
+  color: #212529;
+  text-decoration: none;
+  
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .main {
       border-radius: 0px;
+      width: 90%;
+
   }
 }
 

@@ -43,44 +43,38 @@ export const Signup = (props) => {
 
   return (
     <div className='container'>
-  <h2> to experience iNotebook</h2>
+      <div className="main">
+      <p className="sign" align="center">Sign Up</p>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">Name</label>
-          <input type="text" className="form-control" id="name" name="name" onChange={onChange} aria-describedby="emailHelp" required />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-          <input type="email" className="form-control" id="email" name="email" onChange={onChange} aria-describedby="emailHelp" required />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">Password</label>
+          <input type="text" className="un" placeholder='Your name' id="name" name="name" onChange={onChange} aria-describedby="emailHelp" required />
+        
+          <input type="email" className="un" placeholder='Your email address' id="email" name="email" onChange={onChange} aria-describedby="emailHelp" required />
+
           <div className="password-wrapper">
             <input
               type={showPassword ? 'text' : 'password'}
-              className="form-control"
+              className="un"
               id="password"
+              placeholder='Your password'
               name="password"
               onChange={onChange}
               required
               minLength={5}
             />
             <span className="password-toggle" onClick={togglePasswordVisibility}>
-              {showPassword ? 'Hide' : 'Show'}
+              {showPassword ? <i class="fa-regular fa-eye"></i> : <i class="fa-regular fa-eye-slash"></i>}
             </span>
           </div>
-        </div>
-        <div className="mb-3">
-          <label htmlFor="cpassword" className="form-label">Confirm Password</label>
-          <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={onChange} required minLength={5} />
-        </div>
+          <input type="password" className="un" id="cpassword" placeholder='Confirm your password' name="cpassword" onChange={onChange} required minLength={5} />
+        
 
         {error && <div className="alert alert-danger" role="alert">
           {error}
         </div>}
 
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="submit" align="center">Submit</button>
       </form>
+      </div>
     </div>
   )
 }

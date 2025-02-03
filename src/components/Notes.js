@@ -47,9 +47,11 @@ const Notes = (props) => {
         setNote({...note,[e.target.name]: e.target.value })
     }
     const handleResize = (e) => {
-        e.target.style.height = "auto";
-        e.target.style.height = `${e.target.scrollHeight}px`;
-      };
+        const textarea = e.target;
+        textarea.style.height = "auto";
+        textarea.style.height = `${textarea.scrollHeight}px`;
+    };
+    
     // const renderNotes = () => {
     //     if (loading) return <p>Loading...</p>;
     //     if (notes.length === 0) return <p>No notes to display</p>;
@@ -80,11 +82,11 @@ const Notes = (props) => {
                         <form className="my-3">
                             <div className="mb-3">
                                 <label htmlFor="title" className="form-label">Title</label>
-                                <input  type="text"  className="form-control" placeholder="Enter title"  id="etitle"  name="etitle"  value={note.etitle}  aria-describedby="emailHelp" minLength={5} required onChange={onChange} />
+                                <input  type="text" rows='1' className="form-control" placeholder="Enter title" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" minLength={5} required onChange={onChange} />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="description" className="form-label">Description</label>
-                                <input  type="text"  className="form-control" placeholder="Enter description"  id="edescription"  name="edescription"  value={note.edescription} onInput={handleResize}  onChange={onChange} minLength={5} required/>
+                                <textarea type="text" rows='1' className="form-control" placeholder="Enter description" id="edescription" name="edescription" value={note.edescription} onInput={handleResize} onChange={onChange} minLength={5} required/>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="tag" className="form-label">Tag</label>

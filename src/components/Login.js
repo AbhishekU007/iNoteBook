@@ -68,12 +68,12 @@ const Login = (props) => {
               required
             />
             <span className="password-toggle" onClick={togglePasswordVisibility}>
-              {showPassword ? 'Hide' : 'Show'}
+              {showPassword ? <i class="fa-regular fa-eye"></i> : <i class="fa-regular fa-eye-slash"></i>}
             </span>
           </div>
           <button type="submit" className="submit" align="center">Sign in</button>
-          <p className="forgot" align="center"><a href="#">Forgot Password?</a></p>
         </form>
+        <p className="forgot btn-sm my-3" align="center"><a href="/">Forgot Password?</a></p>
       </div>
     </div>
   );
