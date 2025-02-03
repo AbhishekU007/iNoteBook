@@ -71,10 +71,6 @@ const NoteState = (props) => {
     });
 
     const json = await response.json();
-  
-// Logic to edit in client
-    
-// Updated notes ko frontend end without refresh kiye nahi dikha skte kuuki database me JSON format me stored hota h toh usse phle Parse krege.
 let newNotes = JSON.parse(JSON.stringify(notes));
 
 for (let index = 0; index < newNotes.length; index++) {

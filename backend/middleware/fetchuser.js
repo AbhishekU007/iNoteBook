@@ -5,7 +5,7 @@ const JWT_SECRET = 'HonorDiedOnTheBeach';
 const fetchuser = (req , res , next ) =>{
     //GET the user from the jwt token and add id to req object
 
-    const token = req.header('auth-token'); // ye hum THUNDERCLIENT me reuqst marte wqt dalege dhyaan rkhna
+    const token = req.header('auth-token');
     if(!token){
         res.status(401).send({ error: "Please authenticate using a valid token" });
     }
